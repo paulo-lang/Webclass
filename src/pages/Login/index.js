@@ -1,15 +1,19 @@
 import React from 'react';
 
+import './styles.css'
+
 function Login() {
-    return(
+    return (
         <div className="container">
             <div className="box-login">
-                <form>
-                    <label for="GET-username">Username</label>
-                    <input id="GET-username" type="text" username="username" />
-                    <label for="GET-password">Password</label>
-                    <input id="GET-password" type="password" password="password" />
-                    <input type="submit" value="Save"/>
+                <form className='form'>
+                    <label className='form-item' for="GET-username">Username</label>
+                    <input className='form-item input' id="GET-username" type="text" username="username" />
+                    <label className='form-item' id="LABEL-password" for="GET-password">Password</label>
+                    <input className='form-item input' id="GET-password" type="password" password="password" />
+                    <div className='bottom-login'>
+                        <input className='form-item' id="Submit" type="submit" value="Login" />
+                    </div>
                 </form>
             </div>
         </div>
