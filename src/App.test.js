@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
+import { render, getByLabelText } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders login page', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  const container = document.querySelector('#login-form')
+
+  const usernameElement = getByLabelText(container, /Username/i);
+  expect(usernameElement).toBeInTheDocument();
+
+  const passwordElement = getByLabelText(container, /Password/i);
+  expect(passwordElement).toBeInTheDocument();
 });
